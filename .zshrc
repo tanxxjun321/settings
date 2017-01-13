@@ -91,8 +91,12 @@ fi
 
 alias vi="vim"
 
+bindkey "OC" forward-word
+bindkey "OD" backward-word
+
 bindkey "[C" forward-word
 bindkey "[D" backward-word
+
 bindkey "^W" backward-delete-word
 
 # for Ubuntu
