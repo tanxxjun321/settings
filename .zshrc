@@ -91,9 +91,6 @@ fi
 
 alias vi="vim"
 
-bindkey "OC" forward-word
-bindkey "OD" backward-word
-
 bindkey "[C" forward-word
 bindkey "[D" backward-word
 
