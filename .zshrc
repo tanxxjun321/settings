@@ -45,7 +45,7 @@ ZSH_THEME="intheloop"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux)
+plugins=(git brew tmux docker osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,6 +90,10 @@ else
 fi
 
 alias vi="vim"
+
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
 
 bindkey "[C" forward-word
 bindkey "[D" backward-word
