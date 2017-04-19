@@ -1,7 +1,5 @@
 # settings
 
-
-
 Copy .zshrc .tmux.conf .nvimrc  settings file To $HOME.
 
 ``` python
