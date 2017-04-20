@@ -45,7 +45,7 @@ ZSH_THEME="intheloop"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew tmux docker osx)
+plugins=(git go brew tmux docker osx cmake)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -55,7 +55,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -63,7 +63,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -94,23 +94,19 @@ alias vi="vim"
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
-
-bindkey "[C" forward-word
-bindkey "[D" backward-word
+bindkey "^[^[[C" forward-word
+bindkey "^[^[[D" backward-word
 
 bindkey "^W" backward-delete-word
 
 # for Ubuntu
-# export TERM=xterm-256color
+#export TERM=xterm-256color
 
 # terminal 256 colors support
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
-# export TERM=xterm-256color        # for common 256 color terminals (e.g. gnome-terminal)
-export TERM=screen-256color       # for a tmux -2 session (also for screen)
-# export TERM=rxvt-unicode-256color # for a colorful rxvt unicode session
 source ~/.bash_profile
 
 alias vim=nvim
