@@ -94,13 +94,13 @@ alias vi="vim"
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
-bindkey "^[^[C" forward-word
-bindkey "^[^[D" backward-word
+bindkey "^[^[[C" forward-word
+bindkey "^[^[[D" backward-word
 
 bindkey "^W" backward-delete-word
 
 # for Ubuntu
-export TERM=xterm-256color
+#export TERM=xterm-256color
 
 # terminal 256 colors support
 if [ -x /usr/bin/dircolors ]; then
